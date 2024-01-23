@@ -40,6 +40,47 @@ header {
   z-index: 1;
 }
 
+.katalog {
+  position: fixed;
+  top: -250px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 40px 116px;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-shadow: 0px 8px 16px 0px #F63;
+          box-shadow: 0px 8px 16px 0px #F63;
+  z-index: 1;
+}
+.katalog ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.katalog ul li {
+  list-style: none;
+}
+.katalog ul a {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.katalog ul a:hover {
+  color: #F63;
+}
+
 .nav__all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,6 +112,13 @@ header {
   border-radius: 5px;
   color: white;
   font-size: 17px;
+}
+.nav__btn-1 button {
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav__btn-1 a {
+  color: white;
 }
 .nav__btn-2 {
   display: none;
