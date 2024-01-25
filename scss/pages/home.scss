@@ -1,7 +1,7 @@
 @use "../global";
 @use "../utils/variables" as var;
 
-header {
+#navbar {
   position: fixed;
   left: 0;
   right: 0;
@@ -9,11 +9,17 @@ header {
   box-shadow: 0 0 5px 5px rgb(137, 137, 137);
   background-color: white;
   z-index: 1;
+  transition: 0.5s;
+}
+
+#navbar.navbar-shrink{
+  padding: 5px;
+  box-shadow: 0 0 5px 5px var.$primary-color;
 }
 
 .katalog {
   position: fixed;
-  top: -250px;
+  top: -350px;
   left: 0;
   right: 0;
   width: 100%;
