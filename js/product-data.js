@@ -22,7 +22,7 @@ const products = [
       "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
     price: 71,
     rating: 5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/2.png",
       "../assets/images/products/3.png",
@@ -38,7 +38,7 @@ const products = [
       "A staple food made from flour, water, and yeast, baked into a loaf.",
     price: 88,
     rating: 5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/3.png",
       "../assets/images/products/4.png",
@@ -54,7 +54,7 @@ const products = [
       "A green vegetable with a tree-like appearance, known for its high nutrient content.",
     price: 94,
     rating: 4.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/4.png",
       "../assets/images/products/5.png",
@@ -70,7 +70,7 @@ const products = [
       "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
     price: 82,
     rating: 5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/5.png",
       "../assets/images/products/6.png",
@@ -86,7 +86,7 @@ const products = [
       "A dairy product made from milk, with a variety of textures and flavors.",
     price: 91,
     rating: 3.5,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/6.png",
       "../assets/images/products/7.png",
@@ -102,7 +102,7 @@ const products = [
       "A type of poultry, often used as a source of protein in meals.",
     price: 68,
     rating: 3.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/7.png",
       "../assets/images/products/8.png",
@@ -118,7 +118,7 @@ const products = [
       "A sweet food made from cacao beans, used in a variety of desserts and confections.",
     price: 61,
     rating: 4.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/8.png",
       "../assets/images/products/9.png",
@@ -134,7 +134,7 @@ const products = [
       "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
     price: 98,
     rating: 5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/9.png",
       "../assets/images/products/10.png",
@@ -166,7 +166,7 @@ const products = [
       "A type of seafood, known for its omega-3 fatty acids and high protein content.",
     price: 89,
     rating: 3.5,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/11.png",
       "../assets/images/products/12.png",
@@ -182,7 +182,7 @@ const products = [
       "A small, sweet fruit that grows in clusters, often used in wine-making.",
     price: 61,
     rating: 4,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/12.png",
       "../assets/images/products/13.png",
@@ -214,7 +214,7 @@ const products = [
       "A type of sausage served in a long roll, often used as a quick and convenient food.",
     price: 84,
     rating: 4.5,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/14.png",
       "../assets/images/products/15.png",
@@ -262,7 +262,7 @@ const products = [
       "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
     price: 70,
     rating: 4.5,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/17.png",
       "../assets/images/products/18.png",
@@ -342,7 +342,7 @@ const products = [
       "Mangoes are juicy, sweet tropical fruits with a fleshy interior and a large, oblong seed in the center.",
     price: 80,
     rating: 5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/22.png",
       "../assets/images/products/23.png",
@@ -358,7 +358,7 @@ const products = [
       "Noodles are a type of pasta made from wheat flour and water, often used in Asian cuisine.",
     price: 93,
     rating: 3.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/23.png",
       "../assets/images/products/24.png",
@@ -390,7 +390,7 @@ const products = [
       "Bacon is a popular breakfast food made from cured pork belly, it is newly delivered.",
     price: 71,
     rating: 3.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/25.png",
       "../assets/images/products/26.png",
@@ -422,7 +422,7 @@ const products = [
       "Waffles are a type of breakfast food made from batter cooked in a waffle iron.",
     price: 97,
     rating: 4.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/27.png",
       "../assets/images/products/28.png",
@@ -438,7 +438,7 @@ const products = [
       "Fried Rice is a type of rice dish that is stir-fried in a pan with oil and other ingredients.",
     price: 81,
     rating: 4,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/28.png",
       "../assets/images/products/29.png",
@@ -454,7 +454,7 @@ const products = [
       "Spaghetti is a type of pasta made from wheat flour and water, usually served with sauce.",
     price: 96,
     rating: 3,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/29.png",
       "../assets/images/products/30.png",
@@ -486,7 +486,7 @@ const products = [
       "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
     price: 100,
     rating: 5,
-    discount: 50,
+    discount: "-50%",
     images: [
       "../assets/images/products/31.png",
       "../assets/images/products/32.png",
@@ -502,7 +502,7 @@ const products = [
       "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
     price: 63,
     rating: 4.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/32.png",
       "../assets/images/products/33.png",
@@ -518,7 +518,7 @@ const products = [
       "Salmon is a type of fish that is often grilled or baked and served as a main course.",
     price: 82,
     rating: 4.5,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/33.png",
       "../assets/images/products/34.png",
@@ -531,10 +531,10 @@ const products = [
     name: "Chicken Alfredo",
     category: "Dinner",
     description:
-      "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
+      "Chicken Alfredo is a pasta dish made with chicken in Italian restaurant",
     price: 94,
     rating: 4,
-    discount: 20,
+    discount: "-20%",
     images: [
       "../assets/images/products/34.png",
       "../assets/images/products/35.png",

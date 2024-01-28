@@ -1,40 +1,24 @@
 //promo cards start
 
 const promoRow = document.querySelector(".promo__row");
+const newRow = document.querySelector(".new__row");
+const oldRow = document.querySelector(".old__row");
 
-const promoProducts = [
-  {
-    name: "Г/Ц Блинчики с мясом вес, Россия",
-    price: "50,50₽",
-    disPrice: "44,50₽",
-    img: "../assets/images/card-1.svg",
-  },
-  {
-    name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-    price: "50,50₽",
-    disPrice: "44,50₽",
-    img: "../assets/images/card-2.svg",
-  },
-  {
-    name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-    price: "50,50₽",
-    disPrice: "44,50₽",
-    img: "../assets/images/card-3.svg",
-  },
-  {
-    name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-    price: "50,50₽",
-    disPrice: "44,50₽",
-    img: "../assets/images/card-4.svg",
-  },
-];
-
-function getPromoCard({ name, price, img, disPrice }) {
+function getPromoCard({
+  id,
+  name,
+  category,
+  description,
+  price,
+  rating,
+  discount,
+  images,
+}) {
   const promoCard = document.createElement("div");
   promoCard.className = "promo__card";
   const promoCardImg = document.createElement("img");
   promoCardImg.className = "promo__card-img";
-  promoCardImg.src = img;
+  promoCardImg.src = images[1];
   const promoCardBottom = document.createElement("div");
   promoCardBottom.className = "promo__card-bottom";
   const promoPrice = document.createElement("div");
@@ -57,14 +41,16 @@ function getPromoCard({ name, price, img, disPrice }) {
   const promoDiscount = document.createElement("div");
   promoDiscount.className = "promo__card-50";
   const promoDiscountH4 = document.createElement("h4");
+  const promoName = document.createElement("h2");
 
-  const promoPriceH3Text = document.createTextNode(disPrice);
+  const promoPriceH3Text = document.createTextNode(price);
   const promoPriceH4Text = document.createTextNode(price);
   const promoTitleH4Text = document.createTextNode("С картой");
   const promoTitleH41Text = document.createTextNode("Обычная");
-  const promoCardBottomPText = document.createTextNode(name);
+  const promoCardBottomPText = document.createTextNode(description);
   const promoCardBottomBtnAText = document.createTextNode("В корзину");
-  const promoDiscountH4Text = document.createTextNode("-50%");
+  const promoDiscountH4Text = document.createTextNode(discount);
+  promoName.textContent = name;
 
   promoPriceH3.appendChild(promoPriceH3Text);
   promoPriceH4.appendChild(promoPriceH4Text);
@@ -79,6 +65,7 @@ function getPromoCard({ name, price, img, disPrice }) {
   promoCardBottomBtn.appendChild(promoCardBottomBtnA);
   promoDiscount.appendChild(promoDiscountH4);
   promoCardBottom.append(
+    promoName,
     promoPrice,
     promoTitle,
     promoCardBottomP,
@@ -91,83 +78,31 @@ function getPromoCard({ name, price, img, disPrice }) {
 
   promoRow.append(promoCard);
 
+  if (discount === 0) {
+    promoDiscount.style.display = "none";
+  }
+  promoName.style = `
+  color: #F63;
+  font-size: 20px;
+  `;
   return promoCard;
 }
 
-promoProducts.forEach((el) => {
-  promoRow.append(getPromoCard(el));
+let discountProduct = products.filter((el) => el.discount).slice(-4);
+
+discountProduct.forEach((product) => {
+  promoRow.append(getPromoCard(product));
 });
 
+let newProduct = products.slice(-4);
+
+newProduct.forEach((product) => {
+  newRow.append(getPromoCard(product));
+});
+
+let ratingProduct = products.toSorted((a, b) => a.rating - b.rating).slice(-4);
+
+ratingProduct.forEach((product) => {
+  oldRow.append(getPromoCard(product));
+});
 //promo cards end
-
-//new cards start
-
-// const newRow = document.querySelector(".new__row");
-
-// const newProducts = [
-//   {
-//     name: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-//     price: "599,99₽",
-//     img: "../assets/images/card-5.svg",
-//   },
-//   {
-//     name: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-//     price: "44,50₽",
-//     img: "../assets/images/card-3.svg",
-//   },
-//   {
-//     name: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-//     price: "159,99₽",
-//     img: "../assets/images/card-4.svg",
-//   },
-//   {
-//     name: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-//     price: "599,99₽",
-//     img: "../assets/images/card-2.svg",
-//   },
-// ];
-
-// function getNewCard({name, price, img}) {
-//   const newCard = document.querySelector("div");
-//   newCard.classList = "new__card";
-//   const newCardImg = document.createElement("img");
-//   newCardImg.classList = "new__card-img";
-//   newCardImg.src = img;
-//   const newCardBottom = document.createElement("div");
-//   newCardBottom.classList = "new__card-bottom";
-//   const newCardH3 = document.createElement("h3");
-//   const newCardP = document.createElement("p");
-//   const newCardRating = document.createElement("img");
-//   const newCardBtn = document.createElement("button");
-//   const newCardA = document.createElement("a");
-//   newCardA.href = "../pages/korzina.html";
-//   const newCardLove = document.createElement("img");
-
-//   const newCardH3Text = document.createTextNode(price);
-//   const newCardPText = document.createTextNode(name);
-//   const newCardAText = document.createTextNode("В корзину");
-
-//   newCardH3.appendChild(newCardH3Text);
-//   newCardP.appendChild(newCardPText);
-//   newCardA.appendChild(newCardAText);
-
-//   newCardBtn.appendChild(newCardA);
-
-//   newCardBottom.append(
-//     newCardH3,
-//     newCardP,
-//     newCardRating,
-//     newCardBtn,
-//     newCardLove
-//   );
-
-//   newCard.append(newCardImg, newCardBottom);
-
-//   newRow.append(newCard);
-
-//   return newCard;
-// }
-
-// newProducts.forEach((el) => {
-//   newRow.append(getNewCard(el));
-// });
