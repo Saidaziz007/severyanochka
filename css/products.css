@@ -290,6 +290,36 @@ main {
   line-height: 25px;
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 123, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(80, 39, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(80, 39, 0);
+}
+
+.promo__card {
+  overflow: hidden;
+}
+
+.promo__card-img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.promo__card-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
